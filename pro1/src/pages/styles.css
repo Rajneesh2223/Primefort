@@ -1,0 +1,52 @@
+/* Default label style */
+.form-example label {
+    position: relative;
+    bottom: 1rem; /* Initial position */
+    left: 0rem;
+    transition: transform 0.2s ease, font-size 0.2s ease, bottom 0.2s ease;
+    font-size: 1rem;
+  }
+  
+  /* Move label up when input is focused */
+  .form-example :focus-within label {
+    transform: translateY(-1.5rem);
+    transform: translateX(-1.5rem); /* Move label up */
+    font-size: 1rem; /* Adjust the font size when moved up */
+    bottom: 2rem; /* Adjust the bottom position when moved up */
+  }
+  
+  /* Default input style */
+.input-container {
+    position: relative;
+    width: 200px; /* Set the initial width */
+  }
+  
+  .xyz {
+    width: 100%; /* Use 100% width initially */
+    padding: 10px; /* Add padding for spacing */
+    border: 1px solid #ccc;
+    transition: width 0.3s ease; /* Add a transition for smooth resizing */
+  }
+  
+  /* Increase width when input is focused */
+  .xyz:focus {
+    width: 300px; /* Increase width when focused */
+  }
+  
+  /* Position the label */
+  .xyz-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    pointer-events: none; /* Prevent label from interfering with input */
+    transition: top 0.3s, left 0.3s, font-size 0.3s; /* Add transitions for smooth movement */
+  }
+  
+  /* Move label when input is focused */
+  .xyz:focus + .xyz-label {
+    top: -20px; /* Move label up */
+    left: 10px; /* Adjust left position */
+    font-size: 0.8rem; /* Adjust font size */
+  }
+  
